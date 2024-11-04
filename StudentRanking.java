@@ -11,13 +11,13 @@ import java.util.List;
 public class StudentRanking {
 
 	public static void main(String[] args) {
-		 String csvFile = "\\E:\\shiva.csv\\"; // Path to the CSV file
+		 String csvFile = "\\E:\\shiva.csv\\"; 
 	        String line;
 	        String csvSplitBy = ",";
 	        List<Student> students = new ArrayList<>();
 
 	        
-	     // Read CSV file and process data
+	   
 	        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
 	            // Skip the header line
 	            br.readLine();
@@ -37,7 +37,7 @@ public class StudentRanking {
 	            e.printStackTrace();
 	        }
 	        
-	        // Sort students by total marks in descending order
+	        //  students by total marks in descending order
 	        Collections.sort(students, Comparator.comparingInt(s -> -s.totalMarks));
 
 	        // Assign ranks
